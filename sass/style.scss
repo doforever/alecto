@@ -9,8 +9,6 @@ $color-neutral-1: #edeff1;
 $color-bgr-alt: #f9f9fa;
 $color-btn-activ: rgba(0, 0, 0, 0.3);
 $font-text: 'Raleway', sans-serif;
-$cont-padding: 40px;
-$cont-width: 1430px;
 
 /* General */
 
@@ -26,16 +24,18 @@ body {
 }
 
 .container {
-    max-width: $cont-width;
-    padding: 0 $cont-padding;
+    max-width: 1470px;
+    padding: 0 40px;
     margin: 0 auto;  
+    height: 100%;
 }
 
 .container-100 {
-        width: 100%;
-        margin: 0;
-        padding: 0 $cont-padding;
-    }
+    width: 100%;
+    margin: 0;
+    padding: 0 40px;
+    height: 100%;
+}
 
 section {
     padding-top: 55px;
@@ -98,43 +98,40 @@ section {
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
 
 /* Header */
 
 header {
-    position: relative;
-    background-image: url('../images/header_bg.jpg');
+    background-image: url('../images/Slash_bg.png');
     background-position: center center;
     background-size: cover;
     height: 100vh;
     min-height: 550px;
-    &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        min-height: 550px;
-        background-color: #000000;
-        opacity: 0.55;
-    } 
-    .nav-bar {
-        position: absolute;
-        padding: 57px $cont-padding 0 $cont-padding;
-        max-width: $cont-width;
+    padding: 55px 0;
+    .container {
         display: flex;
-        width: 100%;
-        right: 50%;
-        transform: translateX(50%);
+        flex-direction: column;
+    }
+    .row {
+        display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
         align-content: center;
-        align-items: center;        
-        .logo {
-            flex: 0 0 auto;
+        align-items: center;   
+        justify-content: center;  
+        flex: 1; 
+    }
+    .nav-bar {
+        flex: 0 0 auto;
+        justify-content: space-between;
+        &>div {
+            flex: 0 1 auto;
         }
         .menu {
             display: flex;
+            flex-wrap: wrap;
             justify-content: flex-end;
             align-content: center;
             align-items: center; 
@@ -158,23 +155,23 @@ header {
             text-transform: uppercase;
             letter-spacing: 0.35px;
         }
+        li:last-child>a {
+            font-size: 0;
+        }
         .img {
             margin: 0;
         }
     
     }
     .splash-inner {
-        position: absolute;
         color: $color-light;
         text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
+        flex: 0 1 auto;
         .page-title {
             font-size: 60px;  
             font-weight: 100;
             letter-spacing: 1.5px;
+            margin-top: 0;
             span {
                 font-weight: 700;
             }
@@ -182,6 +179,7 @@ header {
         .page-subtitle {
             letter-spacing: 0.6px;
             font-size: 24px;
+            margin: 0;
         }
         .btn {
             margin: 63px 0 0 0;
@@ -293,9 +291,6 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        &>div {
-            
-        }
     }
   
     p { 
