@@ -154,9 +154,17 @@ header {
             text-align: center;
             text-transform: uppercase;
             letter-spacing: 0.35px;
+            &:hover{
+                opacity: 0.5;
+            }
         }
         li:last-child>a {
             font-size: 0;
+            img {
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
         }
         .img {
             margin: 0;

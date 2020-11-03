@@ -179,8 +179,16 @@ header .nav-bar a {
   letter-spacing: 0.35px;
 }
 
+header .nav-bar a:hover {
+  opacity: 0.5;
+}
+
 header .nav-bar li:last-child > a {
   font-size: 0;
+}
+
+header .nav-bar li:last-child > a img:hover {
+  opacity: 0.5;
 }
 
 header .nav-bar .img {
