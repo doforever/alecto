@@ -139,30 +139,36 @@ header .nav-bar {
       flex: 0 0 auto;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  min-height: 215px;
 }
 
-header .nav-bar > div {
+header .nav-bar .column {
   -ms-flex: 0 1 auto;
       flex: 0 1 auto;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  -ms-flex-align: start;
+      align-items: flex-start;
 }
 
 header .nav-bar .menu {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-pack: end;
       justify-content: flex-end;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-flex-align: center;
-      align-items: center;
   margin: 0;
 }
 
 header .nav-bar ul {
   list-style-type: none;
   display: inline-block;
+  margin: 0;
 }
 
 header .nav-bar li {
@@ -197,11 +203,23 @@ header .nav-bar .img {
   margin: 0;
 }
 
+header .nav-bar .fas {
+  display: none;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 5px;
+}
+
+header .nav-bar .fas:hover {
+  opacity: 0.5;
+}
+
 header .splash-inner {
   color: #ffffff;
   text-align: center;
   -ms-flex: 0 1 auto;
       flex: 0 1 auto;
+  padding: 0;
 }
 
 header .splash-inner .page-title {
@@ -446,6 +464,25 @@ header .splash-inner .btn:hover {
     -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
   }
+  header .menu ul {
+    display: none;
+  }
+  header .menu .fas {
+    display: inline-block;
+  }
+  header .menu .active {
+    border: solid;
+    border-radius: 2px;
+  }
+  header .menu .expanded {
+    display: inline-block;
+    text-align: right;
+    padding-left: 10px;
+  }
+  header .menu .expanded > li {
+    display: block;
+    margin: 0 20px 5px 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -491,6 +528,10 @@ header .splash-inner .btn:hover {
 @media (max-width: 576px) {
   .section-title h1 {
     font-size: 48px;
+  }
+  header .nav-bar .column {
+    -ms-flex: 1;
+        flex: 1;
   }
   .services .column {
     -ms-flex-direction: column;

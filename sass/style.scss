@@ -128,20 +128,25 @@ header {
     .nav-bar {
         flex: 0 0 auto;
         justify-content: space-between;
-        &>div {
+        align-content: flex-start;
+        align-items: flex-start;   
+        min-height: 215px;
+        .column {
             flex: 0 1 auto;
+            flex-direction: row;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            align-items: flex-start;
         }
         .menu {
             display: flex;
-            flex-wrap: wrap;
             justify-content: flex-end;
-            align-content: center;
-            align-items: center; 
             margin: 0;
         }
         ul {
             list-style-type: none;
             display: inline-block;
+            margin: 0;
         }
         li {
             display: inline-block;
@@ -171,12 +176,21 @@ header {
         .img {
             margin: 0;
         }
-    
+        .fas {
+            display: none;
+            color: $color-light;
+            font-size: 20px;
+            padding: 5px;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
     }
     .splash-inner {
         color: $color-light;
         text-align: center;
         flex: 0 1 auto;
+        padding: 0;
         .page-title {
             font-size: 60px;  
             font-weight: 100;
@@ -399,6 +413,29 @@ header {
             }    
         }
     }
+    header {
+        .menu {
+            ul {
+                display: none;
+            }
+            .fas {
+                display: inline-block;
+            }
+            .active {
+                border: solid;
+                border-radius: 2px;
+            }
+            .expanded {
+                display: inline-block;
+                text-align: right;
+                padding-left: 10px;
+                &>li {
+                    display: block;
+                    margin: 0 20px 5px 0;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -457,6 +494,13 @@ header {
     .section-title {
         h1 {
             font-size: 48px;
+        }
+    }
+    header {
+        .nav-bar{
+            .column {
+                flex: 1;
+            }
         }
     }
     .services {
