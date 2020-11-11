@@ -447,13 +447,14 @@ header .splash-inner .btn:hover {
 
 .team .column {
   padding: 0;
-  -ms-flex: 0 1 auto;
-      flex: 0 1 auto;
+  -ms-flex: 1 1 20%;
+      flex: 1 1 20%;
   position: relative;
 }
 
 .team .member {
-  height: 19.97vw;
+  height: 20vw;
+  width: 20vw;
 }
 
 .team .member:hover {
@@ -468,15 +469,16 @@ header .splash-inner .btn:hover {
   content: '';
   background-color: #17daa3;
   opacity: 0.9019607843137255;
-  height: 19.97vw;
-  width: 19.97vw;
+  height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
 
 .team img {
-  width: 19.97vw;
+  width: 100%;
+  height: 100%;
 }
 
 .team p {
@@ -494,6 +496,15 @@ header .splash-inner .btn:hover {
 
 /* Media */
 @media (max-width: 1200px) {
+  section {
+    padding: 25px 0;
+  }
+  .section-title {
+    margin-bottom: 40px;
+  }
+  .services h3 {
+    font-size: 48px;
+  }
   .about .column {
     -ms-flex: 0 0 50%;
         flex: 0 0 50%;
@@ -507,18 +518,6 @@ header .splash-inner .btn:hover {
     min-width: 430px;
   }
   .work .row h2 {
-    font-size: 48px;
-  }
-}
-
-@media (max-width: 1200px) {
-  section {
-    padding: 25px 0;
-  }
-  .section-title {
-    margin-bottom: 40px;
-  }
-  .services h3 {
     font-size: 48px;
   }
 }
@@ -547,14 +546,12 @@ header .splash-inner .btn:hover {
     display: block;
     margin: 0 20px 5px 0;
   }
+  .team .column {
+    -ms-flex: 1 1 50%;
+        flex: 1 1 50%;
+  }
   .team .member {
     height: 50vw;
-  }
-  .team .member:hover::before {
-    height: 50vw;
-    width: 50vw;
-  }
-  .team img {
     width: 50vw;
   }
 }
