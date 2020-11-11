@@ -19,7 +19,7 @@ body {
 }
 
 .container-100 {
-  width: 100%;
+  width: 100vw;
   margin: 0;
   padding: 0 40px;
   height: 100%;
@@ -431,6 +431,67 @@ header .splash-inner .btn:hover {
   line-height: 45px;
 }
 
+.team .container-100 {
+  padding: 0;
+}
+
+.team .section-title {
+  padding: 40px;
+}
+
+.team .row {
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0;
+}
+
+.team .column {
+  padding: 0;
+  -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+  position: relative;
+}
+
+.team .member {
+  height: 19.97vw;
+}
+
+.team .member:hover {
+  opacity: 1;
+}
+
+.team .member:hover p {
+  opacity: 1;
+}
+
+.team .member:hover::before {
+  content: '';
+  background-color: #17daa3;
+  opacity: 0.9019607843137255;
+  height: 19.97vw;
+  width: 19.97vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.team img {
+  width: 19.97vw;
+}
+
+.team p {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 36px;
+  color: #ffffff;
+  cursor: default;
+  text-align: center;
+}
+
 /* Media */
 @media (max-width: 1200px) {
   .about .column {
@@ -451,6 +512,9 @@ header .splash-inner .btn:hover {
 }
 
 @media (max-width: 1200px) {
+  section {
+    padding: 25px 0;
+  }
   .section-title {
     margin-bottom: 40px;
   }
@@ -482,6 +546,16 @@ header .splash-inner .btn:hover {
   header .menu .expanded > li {
     display: block;
     margin: 0 20px 5px 0;
+  }
+  .team .member {
+    height: 50vw;
+  }
+  .team .member:hover::before {
+    height: 50vw;
+    width: 50vw;
+  }
+  .team img {
+    width: 50vw;
   }
 }
 
