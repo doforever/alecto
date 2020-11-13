@@ -32,7 +32,7 @@ section {
 
 .section-title {
   text-align: center;
-  margin: 100px 0;
+  margin: 70px 0;
 }
 
 .section-title h1 {
@@ -294,7 +294,7 @@ header .splash-inner .btn:hover {
 
 /* Work */
 .work {
-  padding-bottom: 19px;
+  padding-bottom: 0;
 }
 
 .work > div:first-child {
@@ -577,6 +577,10 @@ header .splash-inner .btn:hover {
   .work .row h2 {
     font-size: 48px;
   }
+  .pricing .column {
+    -ms-flex: 1 0 50%;
+        flex: 1 0 50%;
+  }
 }
 
 @media (max-width: 925px) {
@@ -610,6 +614,13 @@ header .splash-inner .btn:hover {
   .team .member {
     height: 50vw;
     width: 50vw;
+  }
+  .pricing .box .box-title {
+    padding: 35px;
+  }
+  .pricing .box > div:nth-child(2) {
+    padding: 35px;
+    line-height: 2;
   }
 }
 

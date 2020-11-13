@@ -44,7 +44,7 @@ section {
 
 .section-title {
     text-align: center;
-    margin: 100px 0;
+    margin: 70px 0;
     h1 {
         font-size: 60px;
         font-weight: 200;
@@ -256,7 +256,7 @@ header {
 /* Work */
 
 .work {
-    padding-bottom: 19px;
+    padding-bottom: 0;
     &>div:first-child {
         background-color: $color-bgr-alt;
         p, h2 {
@@ -503,6 +503,11 @@ header {
         }
      
     }
+    .pricing {
+        .column {
+            flex: 1 0 50%;
+        }
+    }
 }
 
 @media (max-width: 925px) {
@@ -544,6 +549,17 @@ header {
         .member {
             height: 50vw;
             width: 50vw;
+        }
+    }
+    .pricing {    
+        .box {
+            .box-title {
+                padding: 35px;
+            }
+            &>div:nth-child(2) {
+                padding: 35px;
+                line-height: 2;
+            }
         }
     }
 }
