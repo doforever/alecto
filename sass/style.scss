@@ -35,22 +35,26 @@ body {
     margin: 0;
     padding: 0 40px;
     height: 100%;
+    overflow: hidden;
 }
 
 section {
     padding-top: 55px;
     padding-bottom: 55px;
 }
+h1 {
+    font-size: 60px;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+    margin: 0;
+    color: $color-neutral-d;
+}
 
 .section-title {
     text-align: center;
     margin: 70px 0;
     h1 {
-        font-size: 60px;
-        font-weight: 200;
-        letter-spacing: 1.5px;
-        margin-bottom: 53px;
-        color: $color-neutral-d;
+        margin: 53px 0;
         position: relative;
         &::before {
             content: "";
@@ -195,7 +199,8 @@ header {
             font-size: 60px;  
             font-weight: 100;
             letter-spacing: 1.5px;
-            margin-top: 0;
+            color: $color-light;
+            margin-bottom: 40px;
             span {
                 font-weight: 700;
             }
@@ -367,6 +372,8 @@ header {
     }
 }
 
+/* Team */
+
 .team {
     padding-bottom: 0;
     .container-100 {
@@ -425,6 +432,8 @@ header {
     }
 }
 
+/* Pricing */
+
 .pricing {
     background-color: $color-bgr-alt;
     .column {
@@ -464,6 +473,29 @@ header {
             font-weight: 700;
             letter-spacing: 0.2em;
         }
+    }
+}
+
+/* Map */
+
+.map {
+    .column {
+        flex: 0 1 50%;
+        justify-content: center;
+        position: relative;
+        align-items: flex-start;
+    }
+    
+    p {
+        line-height: 2;
+        padding: 70px 0;
+    }
+    img {
+       width: 49vw;
+       position: absolute;
+       top: 50%;
+       left: 0;
+       transform: translateY(-50%);
     }
 }
 
@@ -510,8 +542,7 @@ header {
     }
 }
 
-@media (max-width: 925px) {
-        
+@media (max-width: 925px) { 
     .work {
         &>div:last-child {
             .row {
@@ -562,10 +593,28 @@ header {
             }
         }
     }
+    .map {
+        .row {
+            flex-direction: column-reverse;
+        }
+        .column {
+            flex: 0 1 100%;
+        }
+        p {
+            padding: 25px 0;
+        }
+        img {
+            width: 100%;
+            position: static;
+            transform: none;
+        }
+    }
 }
 
 @media (max-width: 767px) {
- 
+    body {
+        font-size: 14px;
+    }  
     header {
         .splash-inner {
             .page-title {
@@ -617,10 +666,8 @@ header {
 }
 
 @media (max-width: 576px) {
-    .section-title {
-        h1 {
-            font-size: 48px;
-        }
+    h1 {
+        font-size: 48px;
     }
     header {
         .nav-bar{

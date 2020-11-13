@@ -23,11 +23,20 @@ body {
   margin: 0;
   padding: 0 40px;
   height: 100%;
+  overflow: hidden;
 }
 
 section {
   padding-top: 55px;
   padding-bottom: 55px;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+  margin: 0;
+  color: #576671;
 }
 
 .section-title {
@@ -36,11 +45,7 @@ section {
 }
 
 .section-title h1 {
-  font-size: 60px;
-  font-weight: 200;
-  letter-spacing: 1.5px;
-  margin-bottom: 53px;
-  color: #576671;
+  margin: 53px 0;
   position: relative;
 }
 
@@ -226,7 +231,8 @@ header .splash-inner .page-title {
   font-size: 60px;
   font-weight: 100;
   letter-spacing: 1.5px;
-  margin-top: 0;
+  color: #ffffff;
+  margin-bottom: 40px;
 }
 
 header .splash-inner .page-title span {
@@ -432,6 +438,7 @@ header .splash-inner .btn:hover {
   line-height: 45px;
 }
 
+/* Team */
 .team {
   padding-bottom: 0;
 }
@@ -498,6 +505,7 @@ header .splash-inner .btn:hover {
   text-align: center;
 }
 
+/* Pricing */
 .pricing {
   background-color: #f9f9fa;
 }
@@ -549,6 +557,30 @@ header .splash-inner .btn:hover {
   color: #ffffff;
   font-weight: 700;
   letter-spacing: 0.2em;
+}
+
+/* Map */
+.map .column {
+  -ms-flex: 0 1 50%;
+      flex: 0 1 50%;
+  -ms-flex-pack: center;
+      justify-content: center;
+  position: relative;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+
+.map p {
+  line-height: 2;
+  padding: 70px 0;
+}
+
+.map img {
+  width: 49vw;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 /* Media */
@@ -622,9 +654,28 @@ header .splash-inner .btn:hover {
     padding: 35px;
     line-height: 2;
   }
+  .map .row {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+  }
+  .map .column {
+    -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
+  }
+  .map p {
+    padding: 25px 0;
+  }
+  .map img {
+    width: 100%;
+    position: static;
+    transform: none;
+  }
 }
 
 @media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
   header .splash-inner .page-title {
     font-size: 44px;
   }
@@ -665,7 +716,7 @@ header .splash-inner .btn:hover {
 }
 
 @media (max-width: 576px) {
-  .section-title h1 {
+  h1 {
     font-size: 48px;
   }
   header .nav-bar .column {
