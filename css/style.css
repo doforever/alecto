@@ -583,6 +583,25 @@ header .splash-inner .btn:hover {
   transform: translateY(-50%);
 }
 
+/* Template */
+.opinions.template .container-100 {
+  background-image: url("../images/template@1X.png");
+}
+
+.opinions.template h1 {
+  color: #ffffff;
+  margin-bottom: 97px;
+}
+
+.opinions.template h1 span {
+  font-weight: 700;
+}
+
+.opinions.template a {
+  border: none;
+  font-weight: 700;
+}
+
 /* Media */
 @media (max-width: 1200px) {
   section {
