@@ -385,21 +385,26 @@ header {
     .member {
         height: 20vw;
         width: 20vw;
+        &::before {
+            content: '';
+            background-color: $color-main; 
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 500ms;
+            opacity: 0;
+        }
         &:hover {
-            opacity: 1;
             p {
                 opacity: 1;
+                transition: all 500ms;
             }
             &::before {
-                content: '';
-                background-color: $color-main;
                 opacity: 0.9019607843137255;
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
             }
+            
         }
     }
     img {

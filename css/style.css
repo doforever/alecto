@@ -457,23 +457,25 @@ header .splash-inner .btn:hover {
   width: 20vw;
 }
 
-.team .member:hover {
-  opacity: 1;
-}
-
-.team .member:hover p {
-  opacity: 1;
-}
-
-.team .member:hover::before {
+.team .member::before {
   content: '';
   background-color: #17daa3;
-  opacity: 0.9019607843137255;
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  transition: all 500ms;
+  opacity: 0;
+}
+
+.team .member:hover p {
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.team .member:hover::before {
+  opacity: 0.9019607843137255;
 }
 
 .team img {
