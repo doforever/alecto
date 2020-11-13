@@ -32,7 +32,7 @@ section {
 
 .section-title {
   text-align: center;
-  margin-bottom: 100px;
+  margin: 100px 0;
 }
 
 .section-title h1 {
@@ -387,6 +387,7 @@ header .splash-inner .btn:hover {
 
 /* Services */
 .services {
+  padding-bottom: 0;
   background-color: #f9f9fa;
 }
 
@@ -431,18 +432,19 @@ header .splash-inner .btn:hover {
   line-height: 45px;
 }
 
-.team .container-100 {
-  padding: 0;
+.team {
+  padding-bottom: 0;
 }
 
-.team .section-title {
-  padding: 40px;
+.team .container-100 {
+  padding: 0;
 }
 
 .team .row {
   -ms-flex-pack: center;
       justify-content: center;
   margin: 0;
+  padding-top: 45px;
 }
 
 .team .column {
@@ -494,6 +496,59 @@ header .splash-inner .btn:hover {
   color: #ffffff;
   cursor: default;
   text-align: center;
+}
+
+.pricing {
+  background-color: #f9f9fa;
+}
+
+.pricing .column {
+  padding: 45px 14px;
+}
+
+.pricing .box-title {
+  padding: 57px 35px;
+  border-bottom: 1px solid #f9f9fa;
+}
+
+.pricing .box-title h3 {
+  font-size: 60px;
+  font-weight: 400;
+  color: #17daa3;
+  margin: 0;
+}
+
+.pricing .box-title p {
+  opacity: 0.45;
+}
+
+.pricing .box {
+  background-color: #ffffff;
+}
+
+.pricing .box > div:nth-child(2) {
+  padding: 65px 35px;
+  line-height: 2.5;
+}
+
+.pricing .purchase {
+  background-color: #17daa3;
+  padding: 30px 35px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.pricing .purchase:hover {
+  background-color: #15BF8F;
+}
+
+.pricing .purchase span {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.2em;
 }
 
 /* Media */

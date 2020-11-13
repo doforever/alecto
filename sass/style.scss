@@ -44,7 +44,7 @@ section {
 
 .section-title {
     text-align: center;
-    margin-bottom: 100px;
+    margin: 100px 0;
     h1 {
         font-size: 60px;
         font-weight: 200;
@@ -331,6 +331,7 @@ header {
 /* Services */
 
 .services {
+    padding-bottom: 0;
     background-color: $color-bgr-alt;
     .row {
         margin: 0 -25px;
@@ -367,15 +368,14 @@ header {
 }
 
 .team {
+    padding-bottom: 0;
     .container-100 {
         padding: 0;
-    }
-    .section-title {
-        padding: 40px;
     }
     .row {
         justify-content: center;
         margin: 0;
+        padding-top: 45px;
     }
     .column {
         padding: 0;
@@ -422,6 +422,48 @@ header {
         color: $color-light;
         cursor: default;
         text-align: center;
+    }
+}
+
+.pricing {
+    background-color: $color-bgr-alt;
+    .column {
+        padding: 45px 14px;
+    }
+    .box-title{
+        padding: 57px 35px;
+        border-bottom: 1px solid $color-bgr-alt;
+        h3 {
+            font-size: 60px;
+            font-weight: 400;
+            color: $color-main;
+            margin: 0;
+        }
+        p {
+            opacity: 0.45;
+        }
+    }
+    .box {
+        background-color: $color-light;
+        &>div:nth-child(2) {
+            padding: 65px 35px;
+            line-height: 2.5;
+        }
+    }
+    .purchase {
+        background-color: $color-main;
+        padding: 30px 35px;
+        display: flex;
+        justify-content: space-between;
+        &:hover {
+            background-color: $color-activ;
+        }
+        span {
+            text-transform: uppercase;
+            color: $color-light;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+        }
     }
 }
 

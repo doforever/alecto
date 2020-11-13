@@ -116,5 +116,4 @@ dist
 .pnp.*
 
 # VSCode workspace file
-.code-workspace
 VSconfig.code-workspace
