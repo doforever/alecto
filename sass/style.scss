@@ -105,7 +105,22 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
+.menu {
+    ul {
+        list-style-type: none;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        margin-right: 36px;
+    }
+    a {
+        text-decoration: none;
+    }
 }
 
 /* Header */
@@ -146,18 +161,8 @@ header {
             display: flex;
             justify-content: flex-end;
             margin: 0;
-        }
-        ul {
-            list-style-type: none;
-            display: inline-block;
-            margin: 0;
-        }
-        li {
-            display: inline-block;
-            margin-right: 36px;
-        }
+        }       
         a {
-            text-decoration: none;
             color: $color-light;
             font-size: 14px;
             font-weight: 700;
@@ -518,6 +523,38 @@ header {
     }
 }
 
+/* Footer */
+
+footer {
+    padding-bottom: 155px;
+    .container {
+        background-image: url('../images/A_logo_bgr@1X.png');
+        height: 600px;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+    .column {
+        flex-direction: row;
+        flex: 0 1 auto;
+    }
+    img {
+        margin-right: 21px;
+    }
+    .menu {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        li {
+            opacity: 0.45;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        a {
+            color: inherit;
+        }
+    }
+}
+
 /* Media */
 
 @media (max-width: 1200px) {
@@ -557,6 +594,17 @@ header {
     .pricing {
         .column {
             flex: 1 0 50%;
+        }
+    }
+    footer {
+        .menu {
+            li {
+                display: none;
+            }
+            li:first-child {
+                display: inline;
+                margin: 0;
+            }
         }
     }
 }
@@ -709,6 +757,14 @@ header {
         }
         p {
             line-height: 32px;
+        }
+    }
+    footer {
+        .column {
+            flex: 5 2 0;
+        }
+        .column.menu {
+            flex: 1 0 0;
         }
     }
 }
